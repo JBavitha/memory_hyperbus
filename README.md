@@ -73,5 +73,6 @@ Determine the burst type (wrapped or linear) and handle the burst length as spec
   - RSTO# (Reset Output): Indicates a Power-On-Reset (POR) condition.
   - INT# (Interrupt): Signals an internal event or error condition.
 
+10. Ensure Data Setup and Hold Times: Verify that the data is stable before and after the clock edge.
 
 
