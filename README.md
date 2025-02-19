@@ -1,14 +1,14 @@
 # memory_hyperbus
 #### Parsing and Decoding Command-Address (CA) Signals
-1. Command-Address Structure
+***1. Command-Address Structure***
 - The CA signals are transferred over the DQ[7:0] lines during the initial part of a transaction. The CA information is composed of three words (CA0, CA1, CA2) and is transferred using DDR timing, meaning each byte is transferred on each clock edge.
 
-2. CA Bit Assignment
+***2. CA Bit Assignment***
 
  ![image](https://github.com/user-attachments/assets/18f47f83-6f8d-49e2-bcd3-e6a2fa5c836d)
 
 
-3. Decoding Steps
+***3. Decoding Steps***
 
 **Step 1:** Extract CA Bits
 From the CA0, CA1, and CA2 words, extract the relevant bits to determine the transaction type and address.
@@ -55,10 +55,10 @@ Determine the burst type (wrapped or linear) and handle the burst length as spec
 
 ***6. Burst Transactions***
 
-- Burst transactions are a key feature of the HyperBus interface, allowing for efficient data transfer. You need to handle both wrapped and linear bursts correctly.
+- Burst transactions are a key feature of the HyperBus interface, allowing for efficient data transfer. we need to handle both wrapped and linear bursts correctly.
 
-- Wrapped Burst: Data wraps around within a configured group of words.
-- Linear Burst: Data is transferred sequentially without wrapping.
+ - Wrapped Burst: Data wraps around within a configured group of words.
+ - Linear Burst: Data is transferred sequentially without wrapping.
 
 ***7. Latency Management***
 
