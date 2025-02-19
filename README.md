@@ -32,7 +32,7 @@ Determine the burst type (wrapped or linear) and handle the burst length as spec
   - The memory device uses RWDS for data masking during write transactions.
 
 
-4. Configuration Registers
+***4. Configuration Registers***
 
 - These registers determine various operational parameters such as power modes, output drive strength, initial latency, and burst characteristics.
 
@@ -46,27 +46,32 @@ Determine the burst type (wrapped or linear) and handle the burst length as spec
   - Hybrid Burst Enable: Configures the burst type (wrapped or linear).
   - Burst Length: Specifies the length of the burst transaction.
 
-5. Memory Space and Register Space
+***5. Memory Space and Register Space***
 
 - Understanding the distinction between memory space and register space is essential for proper address decoding and transaction handling.
 
 - Memory Space: Used for accessing the main memory array.
 - Register Space: Used for accessing device identification registers and configuration registers.
 
-6. Burst Transactions
+***6. Burst Transactions***
 
 - Burst transactions are a key feature of the HyperBus interface, allowing for efficient data transfer. You need to handle both wrapped and linear bursts correctly.
 
 - Wrapped Burst: Data wraps around within a configured group of words.
 - Linear Burst: Data is transferred sequentially without wrapping.
 
-7. Latency Management
+***7. Latency Management***
 
 - Initial latency is crucial for ensuring that the memory device is ready for data transfer. The latency count is specified in the configuration register and can be adjusted based on the clock frequency and device requirements.
 
-8. Power Management
+***8. Power Management***
 
 - Power management is essential for conserving energy, especially in low-power applications. The Deep Power-Down (DPD) mode can significantly reduce power consumption when the memory is not in use.
+
+***9. Error Handling and Status Signals***
+- Implementing error handling and status signals can help in diagnosing issues and ensuring reliable operation.
+  - RSTO# (Reset Output): Indicates a Power-On-Reset (POR) condition.
+  - INT# (Interrupt): Signals an internal event or error condition.
 
 
 
